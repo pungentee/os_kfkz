@@ -8,6 +8,16 @@
 
 ## Main task
 
+### 2.1 List the steps to deploy an operating system based on a VirtualBox virtual machine.
+
+VM creation stages:
+1. Check wether CPU virtualisation is enabled in your BIOS/UEFI 
+2. Download .ISO image of OS you prefer to install (if needed)
+3. Open VirtualBox application on your machine
+4. Press “Create New” button to create new virtual machine
+5. Following simple GUI configure name of VM, guest OS type, amount of RAM and disk space
+6. Run guest OS
+
 ### 2.2 32- and 64-bit OSes installation:
 
 - For 32-bit OS nowadays there are no real hardware limitations (for CISC/RISC CPUs) because every 64-bit CPU has backward compatibility, except full-RISC CPUs. But for 64-bit OS will work only with 64-bit CPU.
@@ -97,3 +107,21 @@ sudo apt install gnome
 | **Commonly Used In** | Xubuntu, Manjaro XFCE, Debian XFCE | Advanced Arch Linux setups, custom lightweight distros |
 | **Strengths** | Balance of speed and usability, easy to use | Extremely lightweight, flexible, efficient for power users |
 | **Weaknesses** | Lacks some modern UI effects, less customizable than KDE | Steep learning curve, requires manual configuration |
+
+## Control questions
+
+### 5. What system administration tasks can be implemented on the basis of Linux?
+
+Linux supports essential system administration tasks like managing users, groups, and file systems; configuring networks and security; installing and updating software; monitoring processes and performance; handling backups and logs; setting up servers; and automating tasks with scripts or tools like Ansible. It also excels in virtualization and container management (e.g., Docker, Kubernetes). Linux's flexibility and open-source nature make it a powerful platform for system administration.
+
+### 6. What is the relationship between Android and Linux? 
+
+Android is based on the Linux kernel, which provides core functionality like hardware interaction and process management. However, Android is not a traditional Linux distribution—it replaces GNU tools with a custom runtime (ART) and is tailored for mobile devices with features like touchscreens and power management. While the core Android system is open source, many devices include proprietary additions like Google Play Services.
+
+### 7. What are the main features and scope of Embedded Linux?
+
+Embedded Linux is a customized version of Linux designed for embedded systems, offering features like customizability, open-source flexibility, portability across hardware architectures, real-time capabilities, robust networking, and strong security. It is widely used in consumer electronics, industrial automation, automotive systems, networking devices, medical equipment, aerospace, IoT, and wearables. Its adaptability, cost-effectiveness, and extensive toolchain make it a popular choice for developers in diverse industries.
+
+### 8. How can I change the Linux boot type: in text mode (level 3) or graphical mode (level 5)? What is the difference between CLI and GUI modes?
+
+To change the Linux boot type between text mode (runlevel 3) and graphical mode (runlevel 5), you can permanently set the default runlevel or temporarily switch modes. For **SysV init**, edit `/etc/inittab` and set `id:3` for text mode or `id:5` for graphical mode. For **systemd**, use `sudo systemctl set-default multi-user.target` for text mode or `graphical.target` for graphical mode. Temporarily switch modes with `sudo systemctl isolate multi-user.target` (text) or `graphical.target` (graphical).
