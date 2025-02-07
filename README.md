@@ -1,0 +1,14 @@
+# Operating Systems
+
+## Laboratory works
+
+[Laboratory work #1](./Labs/n1/README.md)
+
+## Work cases in Linux
+
+[Work Case #1](./Linux/n1/README.md)
+
+## Lectures
+
+[Lecture #1](./Lectures/n1/README.md)
+
