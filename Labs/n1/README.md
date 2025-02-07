@@ -8,7 +8,7 @@
 
 ## Main task
 
-2.2 32- and 64-bit OSes installation:
+### 2.2 32- and 64-bit OSes installation:
 
 - For 32-bit OS nowadays there are no real hardware limitations (for CISC/RISC CPUs) because every 64-bit CPU has backward compatibility, except full-RISC CPUs. But for 64-bit OS will work only with 64-bit CPU.
 
@@ -18,7 +18,7 @@
 
 - A 64-bit OS needs 64-bit drivers, which may not be available for older hardware
 
-2.3  Linux OS install stages in CLI mode:
+### 2.3  Linux OS install stages in CLI mode:
 1. Formatting drive
 2. Creating file systems with mkds.xxxx where x, name of FS.
 3. Installing basic OS
@@ -29,41 +29,59 @@
 8. Setting up bootloader
 9. reboot
 
-2.4 KDE, GNOME installation for preinstalled OS:
+### 2.4 KDE, GNOME installation for preinstalled OS:
 
-**KDE:**
+#### KDE:
 
 **Gentoo Linux**
 
-(previously) eselect profile set 27 (for KDE Plasma Desktop)
+(previously) 
+```
+eselect profile set 27
+```
 
+```
 emerge –ask –verbose kde-plasma/plasma-meta
+```
 
 **Arch Linux**
 
+```
 pacman -Sy plasma-desktop
+```
 
 **Debian GNU/Linux**
 
+```
 apt install kde-plasma-desktop
+```
 
-**GNOME:**
+#### GNOME:
 
 **Gentoo Linux**
 
-(previously) eselect profile set 25 (for GNOME)
+(previously) 
+```
+eselect profile set 25 (for GNOME)
+```
 
+```
 emerge --ask gnome-base/gnome
+```
 
 **Arch Linux**
 
+```
 sudo pacman -Sy gnome gnome-extra
+```
 
 **Debian GNU/Linux**
 
+```
 sudo apt install gnome
+```
 
-2.5 
+### 2.5 
 
 | Feature        | XFCE                           | LVWM                           |
 |--------------|--------------------------------|--------------------------------|
