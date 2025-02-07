@@ -62,7 +62,7 @@ apt install kde-plasma-desktop
 
 (previously) 
 ```
-eselect profile set 25 (for GNOME)
+eselect profile set 25
 ```
 
 ```
