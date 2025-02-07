@@ -110,6 +110,41 @@ sudo apt install gnome
 
 ## Control questions
 
+### 1. Compare type 1 and type 2 hypervisors, what is the difference between them and their scope of application?
+
+|             | Type 1 (Bare-Metal)      | Type 2 (Hosted)                |
+| ----------- | ------------------------ | ------------------------------ |
+| Runs on     | Hardware directly        | Existing OS                    |
+| Performance | Better, lower latency    | Higher overhead                |
+| Use Cases   | Enterprise, data centers | Development, personal use      |
+| Examples    | VMware ESXi, Hyper-V     | VirtualBox, VMware Workstation |
+Key Differences:
+- **Architecture:** Type 1 is on hardware, Type 2 is on OS.
+- **Performance:** Type 1 is faster, Type 2 has more overhead.
+- **Use Cases:** Type 1 for enterprise, Type 2 for development.
+
+### 2. Explain the concept of “GNU GPL”, what is its main concept?
+
+The GNU General Public License (GNU GPL) is a free software license that ensures users have the freedom to use, study, modify, and share software. Its core concept is copyleft: any distributed or modified versions of GPL-licensed software must also be open source and carry the same freedoms. This keeps software free and accessible for everyone, preventing it from becoming proprietary.
+
+### 3. What is the essence of open source software?
+
+The essence of open source software is that its source code is freely available for anyone to view, modify, and distribute. This fosters collaboration, transparency, and innovation by allowing users to:
+- Study how the software works.
+- Improve or customize it to meet their needs.
+- Share the software and their modifications with others.
+Open source software is built on principles of community-driven development, freedom, and accessibility, enabling widespread participation and continuous improvement.
+
+### 4. What is a Linux distribution?
+
+A Linux distribution (or "distro") is a complete operating system built around the Linux kernel. It includes:
+- Linux Kernel: The core that manages hardware and system resources.
+- GNU Tools: Essential utilities and libraries (e.g., Bash, GCC).
+- Package Manager: Software to install, update, and manage applications (e.g., APT, YUM, Pacman).
+- Desktop Environment: Graphical user interface (e.g., GNOME, KDE).
+- Additional Software: Pre-installed applications (e.g., web browsers, office suites).
+Popular examples include Ubuntu, Fedora, and Debian. Each distro is tailored for different needs, such as user-friendliness, stability, or customization.
+
 ### 5. What system administration tasks can be implemented on the basis of Linux?
 
 Linux supports essential system administration tasks like managing users, groups, and file systems; configuring networks and security; installing and updating software; monitoring processes and performance; handling backups and logs; setting up servers; and automating tasks with scripts or tools like Ansible. It also excels in virtualization and container management (e.g., Docker, Kubernetes). Linux's flexibility and open-source nature make it a powerful platform for system administration.
