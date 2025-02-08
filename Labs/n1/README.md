@@ -160,3 +160,7 @@ Embedded Linux is a customized version of Linux designed for embedded systems, o
 ### 8. How can I change the Linux boot type: in text mode (level 3) or graphical mode (level 5)? What is the difference between CLI and GUI modes?
 
 To change the Linux boot type between text mode (runlevel 3) and graphical mode (runlevel 5), you can permanently set the default runlevel or temporarily switch modes. For **SysV init**, edit `/etc/inittab` and set `id:3` for text mode or `id:5` for graphical mode. For **systemd**, use `sudo systemctl set-default multi-user.target` for text mode or `graphical.target` for graphical mode. Temporarily switch modes with `sudo systemctl isolate multi-user.target` (text) or `graphical.target` (graphical).
+
+## Conclusion
+
+During the laboratory work, we explored the internal features of Linux distributions as well as working with GitHub.
