@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/a30626bd-9e7b-4a02-91a0-fa6df69f85b5)# Lab. #1
+# Lab. #1
 
 **Topic:** Introduction to the Interface and Features of Linux OS
 
