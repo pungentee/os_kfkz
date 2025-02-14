@@ -1,4 +1,4 @@
-# Lab. #1
+# Lab. #2
 
 **Topic:** Introduction to the Interface and Features of Linux OS
 
