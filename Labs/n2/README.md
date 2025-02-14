@@ -1,12 +1,91 @@
+# Lab. #2
+
+**Topic:** Introduction to the Interface and Features of Linux OS
+
+**Purpose of the Work:**
+Gaining practical skills in working with Linux OS and mobile OS environments – including their graphical interface, logging in and out of the system, familiarizing with the desktop structure, and learning the basic operations and settings for working within the system.
+
+## Main task
+
+### 1. Working in Graphical Mode in Linux OS
+
+#### 1.1 Choose a Graphical Shell for a Linux OS to Review. Examine the structure of the user workspace and describe its main components.
+
+- **Main menu.** The main menu in KDE, called Kickoff, is in the bottom-left corner by default. It provides access to installed applications, system settings, and recent files. Users can browse applications by category or use the search function to find what they need quickly. KDE also offers alternatives like the Application Dashboard, which presents a full-screen launcher, and Simple Menu, which offers a more minimalistic approach.
+- **Quick access.** KDE uses a taskbar to display open applications, allowing users to switch between them easily. It supports grouping, window previews, and pinning frequently used applications.
+- **Search.** Main search system is KRunner. Activated by pressing Alt + Space, KRunner allows users to launch applications, open files, perform calculations, search online, and execute commands.
+- **Virtual desktops creation.** KDE supports multiple virtual desktops, allowing users to organize their workspace efficiently. Users can switch between them using keyboard shortcuts (Ctrl + F1 to Ctrl + F4 by default) or via the desktop switcher widget. Or by using Activities.
+
+#### 1.2 Applications execution
+
+- Via quick access
+
+![image](https://github.com/user-attachments/assets/e39c6cca-0b0c-4412-8dee-4bfc375eab1b)
+
+- Via search
+
+![image](https://github.com/user-attachments/assets/c41cad05-707b-4854-a202-67b327bba3fb)
+
+- Via widget
+
+![image](https://github.com/user-attachments/assets/e8792430-0860-4bd5-9f7b-755f1dd0e8ce)
+
+#### 1.3 Exit and shutdown
+
+- Changing user to `root`
+
+![image](https://github.com/user-attachments/assets/1ff3c61b-4a83-4cbb-b8d0-32aa9a98b893)
+
+- System restart and shutdown (via main menu)
+
+![image](https://github.com/user-attachments/assets/0384d88b-109d-439f-b0e3-703050b1eeeb)
+
+### 2. Working in a mobile OS environment
+
+#### 1. Describe the main menu of your mobile OS, what kind of graphical interface does it use?
+
+The main menu of iOS is the Home Screen, which features a grid-based graphical interface. It uses a touch-friendly UI with app icons arranged in rows and columns. The interface is gesture-driven, allowing users to swipe between pages, tap icons to open apps, and use drag-and-drop for customization. The Dock at the bottom provides quick access to frequently used apps. iOS uses a flat design with smooth animations and transparency effects, following Apple’s Human Interface Guidelines.
+
+#### 2. Describe the settings menu for the components of a mobile phone.
+
+The Settings menu in iOS provides access to various system and hardware configurations. It has a list-based interface with categorized sections. Key components include:
+- Wi-Fi & Bluetooth – Manage wireless connections
+- Cellular – Control mobile data usage
+- Sounds & Haptics – Adjust volume, ringtones, and vibration
+- Display & Brightness – Configure screen brightness, text size, and dark mode
+- Battery – View battery usage and enable Low Power Mode
+- Privacy & Security – Manage app permissions and data access
+- General – System settings, software updates, and device information
+Each section has submenus for detailed customization
+
+#### 3. Use keyboard shortcuts to perform special actions.
+
+On iOS, you can use keyboard shortcuts when a physical keyboard is connected (e.g., via Bluetooth or Magic Keyboard). Some common shortcuts include:
+- ⌘ + H – Go to the Home Screen
+- ⌘ + Space – Open Spotlight search
+- ⌘ + Tab – Switch between open apps
+- ⌘ + Shift + 3 – Take a screenshot
+- ⌘ + Shift + 4 – Take a screenshot and open Markup
+- ⌘ + Option + D – Show or hide the Dock
+Many apps, like Safari and Notes, support additional shortcuts for navigation and text editing
+
+#### 4. Log in and shut down the device. Features of the battery power settings
+
+To log in to an iOS device, press the Side button or the Home button on older models and use Face ID, Touch ID, or enter a passcode. To shut down the device, go to Settings, then General, and select Shut Down, or hold the Side button along with a Volume button until the power slider appears, then slide to turn off.
+
+Battery power settings in iOS include options for monitoring battery health and charging, enabling Low Power Mode to reduce background activity, and viewing battery usage by app. The system also features Optimized Battery Charging, which slows down charging at night to extend battery lifespan. Additionally, users can manage Background App Refresh to control which apps update in the background, helping to save power.
+
+## Control questions
+
 ### 1. Give examples of Linux server applications for database servers, messaging servers, and file sharing.
 
 For database servers, common Linux applications include MySQL, PostgreSQL, and MariaDB for relational databases, while MongoDB and Redis handle NoSQL and caching needs. Messaging servers often use Postfix or Exim for email, with Dovecot managing mailbox access, and RabbitMQ or Kafka handling message queuing. For file sharing, Samba enables Windows compatibility, NFS supports Linux/Unix systems, and solutions like Nextcloud provide cloud-based storage.
 
-### 2. Compare the Bourne, C, Bourne Again (Bash) shells, the tcsh, the Korn shell (Ksh), and zsh.
+### 2.	Compare the Bourne, C, Bourne Again (Bash) shells, the tcsh, the Korn shell (Ksh), and zsh
 
 The Bourne shell (sh) is a simple, widely compatible scripting shell. The C shell (csh) introduced C-like syntax and job control but had weaker scripting. Bash improved on sh with better interactivity and scripting. Tcsh enhanced csh with auto-completion and editing. The Korn shell (ksh) combined sh’s reliability with advanced features. Zsh is the most feature-rich, offering customization, auto-completion, and scripting improvements.
 
-### 3. What is a package manager for? What package managers do you know in Linux?
+### 3.	What is a package manager for? What package managers do you know in Linux?
 
 A package manager automates the installation, updating, and removal of software on a Linux system, handling dependencies to ensure smooth operation. Common Linux package managers include APT (Debian, Ubuntu), DNF/YUM (Fedora, RHEL), Zypper (openSUSE), and Pacman (Arch Linux). There are also universal package managers like Flatpak, Snap, and AppImage for cross-distribution applications.
 
@@ -50,17 +129,6 @@ $ tty
 
 This feature proves especially useful when troubleshooting system issues – for instance, if the graphical interface freezes, you can switch to a text console, log in, and resolve the problem. 
 
-### 9. Which virtual console (terminal) performs the function of the graphical interface?
+## Conclusion
 
-On most Linux distributions, the graphical session resides on virtual console 7 (TTY7) by default. It might be otherwise, however, depending on system configuration. Virtual consoles may be switched between using Ctrl + Alt + F1 to Ctrl + Alt + F6 for the text consoles and Ctrl + Alt + F7 (sometimes F2-F8) for the graphical session.
-
-### 10. Is it possible to log in multiple times under the same system username in Linux? What advantages does this provide?
-
-Yes, Linux does allow simultaneous logins using the same username, whether through multiple virtual consoles, SSH sessions, or GUI sessions.
-
-Advantages:
-- Allows a user to run multiple tasks in separate sessions without interfering with each other.
-- Easy for remote use, as it enables users to log on from different places.
-- Allows multitasking in server administration and development environments.
-
-But some of GUI DM doesn't support logging in single user (usually X11/Xorg ones).
+During the laboratory work, we explored the interface and capabilities of the Linux operating system, including graphical environments and the command line. We learned to perform basic operations such as launching applications, switching between virtual consoles, changing users, and shutting down the system.
