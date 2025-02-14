@@ -40,7 +40,40 @@ Gaining practical skills in working with Linux OS and mobile OS environments –
 
 ![image](https://github.com/user-attachments/assets/0384d88b-109d-439f-b0e3-703050b1eeeb)
 
-### 2. 
+### 2. Working in a mobile OS environment
+
+#### 1. Describe the main menu of your mobile OS, what kind of graphical interface does it use?
+
+The main menu of iOS is the Home Screen, which features a grid-based graphical interface. It uses a touch-friendly UI with app icons arranged in rows and columns. The interface is gesture-driven, allowing users to swipe between pages, tap icons to open apps, and use drag-and-drop for customization. The Dock at the bottom provides quick access to frequently used apps. iOS uses a flat design with smooth animations and transparency effects, following Apple’s Human Interface Guidelines.
+
+#### 2. Describe the settings menu for the components of a mobile phone.
+
+The Settings menu in iOS provides access to various system and hardware configurations. It has a list-based interface with categorized sections. Key components include:
+- Wi-Fi & Bluetooth – Manage wireless connections
+- Cellular – Control mobile data usage
+- Sounds & Haptics – Adjust volume, ringtones, and vibration
+- Display & Brightness – Configure screen brightness, text size, and dark mode
+- Battery – View battery usage and enable Low Power Mode
+- Privacy & Security – Manage app permissions and data access
+- General – System settings, software updates, and device information
+Each section has submenus for detailed customization
+
+#### 3. Use keyboard shortcuts to perform special actions.
+
+On iOS, you can use keyboard shortcuts when a physical keyboard is connected (e.g., via Bluetooth or Magic Keyboard). Some common shortcuts include:
+- ⌘ + H – Go to the Home Screen
+- ⌘ + Space – Open Spotlight search
+- ⌘ + Tab – Switch between open apps
+- ⌘ + Shift + 3 – Take a screenshot
+- ⌘ + Shift + 4 – Take a screenshot and open Markup
+- ⌘ + Option + D – Show or hide the Dock
+Many apps, like Safari and Notes, support additional shortcuts for navigation and text editing
+
+#### 4. Log in and shut down the device. Features of the battery power settings
+
+To log in to an iOS device, press the Side button or the Home button on older models and use Face ID, Touch ID, or enter a passcode. To shut down the device, go to Settings, then General, and select Shut Down, or hold the Side button along with a Volume button until the power slider appears, then slide to turn off.
+
+Battery power settings in iOS include options for monitoring battery health and charging, enabling Low Power Mode to reduce background activity, and viewing battery usage by app. The system also features Optimized Battery Charging, which slows down charging at night to extend battery lifespan. Additionally, users can manage Background App Refresh to control which apps update in the background, helping to save power.
 
 ## Control questions
 
