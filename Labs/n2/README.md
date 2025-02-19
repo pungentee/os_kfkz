@@ -81,11 +81,11 @@ Battery power settings in iOS include options for monitoring battery health and 
 
 For database servers, common Linux applications include MySQL, PostgreSQL, and MariaDB for relational databases, while MongoDB and Redis handle NoSQL and caching needs. Messaging servers often use Postfix or Exim for email, with Dovecot managing mailbox access, and RabbitMQ or Kafka handling message queuing. For file sharing, Samba enables Windows compatibility, NFS supports Linux/Unix systems, and solutions like Nextcloud provide cloud-based storage.
 
-### 2.	Compare the Bourne, C, Bourne Again (Bash) shells, the tcsh, the Korn shell (Ksh), and zsh
+### 2. Compare the Bourne, C, Bourne Again (Bash) shells, the tcsh, the Korn shell (Ksh), and zsh.
 
 The Bourne shell (sh) is a simple, widely compatible scripting shell. The C shell (csh) introduced C-like syntax and job control but had weaker scripting. Bash improved on sh with better interactivity and scripting. Tcsh enhanced csh with auto-completion and editing. The Korn shell (ksh) combined sh’s reliability with advanced features. Zsh is the most feature-rich, offering customization, auto-completion, and scripting improvements.
 
-### 3.	What is a package manager for? What package managers do you know in Linux?
+### 3. What is a package manager for? What package managers do you know in Linux?
 
 A package manager automates the installation, updating, and removal of software on a Linux system, handling dependencies to ensure smooth operation. Common Linux package managers include APT (Debian, Ubuntu), DNF/YUM (Fedora, RHEL), Zypper (openSUSE), and Pacman (Arch Linux). There are also universal package managers like Flatpak, Snap, and AppImage for cross-distribution applications.
 
@@ -128,6 +128,21 @@ $ tty
 ```
 
 This feature proves especially useful when troubleshooting system issues – for instance, if the graphical interface freezes, you can switch to a text console, log in, and resolve the problem. 
+
+### 9. Which virtual console (terminal) performs the function of the graphical interface?
+
+On most Linux distributions, the graphical session resides on virtual console 7 (TTY7) by default. It might be otherwise, however, depending on system configuration. Virtual consoles may be switched between using Ctrl + Alt + F1 to Ctrl + Alt + F6 for the text consoles and Ctrl + Alt + F7 (sometimes F2-F8) for the graphical session.
+
+### 10. Is it possible to log in multiple times under the same system username in Linux? What advantages does this provide?
+
+Yes, Linux does allow simultaneous logins using the same username, whether through multiple virtual consoles, SSH sessions, or GUI sessions.
+
+Advantages:
+- Allows a user to run multiple tasks in separate sessions without interfering with each other.
+- Easy for remote use, as it enables users to log on from different places.
+- Allows multitasking in server administration and development environments.
+
+But some of GUI DM doesn't support logging in single user (usually X11/Xorg ones).
 
 ## Conclusion
 
