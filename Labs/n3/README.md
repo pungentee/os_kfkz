@@ -7,7 +7,7 @@ Learn basic commands for working in CLI mode and basic text commands in terminal
 
 ## Main task
 
-### 1 Linux Commands Table
+### 1. Linux Commands Table
 
 | Command           | Purpose and Functionality |
 |------------------|-------------------------|
