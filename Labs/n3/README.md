@@ -7,7 +7,30 @@ Learn basic commands for working in CLI mode and basic text commands in terminal
 
 ## Main task
 
-### 1.
+### 1.## Linux Commands Table
+
+| Command           | Purpose and Functionality |
+|------------------|-------------------------|
+| **ls** | Displays information about directories and files. By default, without arguments, it shows information for the current directory. |
+| **ls -l** | Using the `-l` parameter in the `ls` command allows displaying information about files in the current working directory in a long format. |
+| **ls -l /home** | Displays detailed information about files in the `/home` directory. |
+| **whoami** | Displays the name of the current user. |
+| **whereis** | Displays the location of the executable file, source code, and man page for a specified command. |
+| **uname** | Displays system information (by default, the operating system name). |
+| **uname -n** | Displays the system's hostname. |
+| **pwd** | Displays the full path to the current working directory. |
+| **echo** | Prints the text to the screen. |
+| **history** | Displays a list of previously entered commands. |
+| **!1** | Repeats the first command from the command history. |
+| **echo $VAR** | Displays the env variable.  |
+| **type** | Shows whether the entered word is a command, a built-in command, or an external program. |
+| **alias** | Displays a list of defined command aliases. |
+| **`date`** | Executes the `date` command and substitutes its result into the command where it is used. |
+| **date** | Displays the current date and time. |
+| **man** | Opens the manual page (man-page) for the specified command. |
+| **apropos** | Searches for commands related to the entered keyword. |
+| **info** | Opens detailed documentation (info page) for the specified command. |
+| **locate** | Searches for the specified file in the system using a prebuilt file index. |
 
 ### 2. Working with variables and aliases in the terminal
 
