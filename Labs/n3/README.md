@@ -37,6 +37,7 @@ Task 2.1 and 2.2 ware completed using the loop
 #### 2.5 Working with help commands (Man Pages) in the terminal
 
 Manual was received for the command `uname`
+
 ![image](./attachments/7.png)
 ![image](./attachments/8.png)
 
