@@ -5,6 +5,7 @@
 - [Laboratory work #1](./Labs/n1/README.md)
 - [Laboratory work #2](./Labs/n2/README.md)
 - [Laboratory work #3](./Labs/n3/README.md)
+- [Laboratory work #4](./Labs/n4/README.md)
 
 ## Work cases in Linux
 
