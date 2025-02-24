@@ -108,6 +108,6 @@ The team repository creator is Tymofii Kliyiev
 ![image](https://github.com/user-attachments/assets/59112b7e-53bb-4716-b732-7b2768b79ebc)
 
 # iRaited
-
+Git enables efficient version control, collaboration, and project history management. A public repository was created for the "Operating Systems" course, and the first collaborative report was successfully committed. This experience highlights the importance of Git in teamwork and development.
 ## Conclusion
 
