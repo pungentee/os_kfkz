@@ -15,20 +15,26 @@
     - `/proc/meminfo` – Memory usage details.
     - `/proc/<PID>/` – Process-specific details, where \<PID\> is the process ID.
     - `/proc/uptime` – System uptime.
+
 2. Command `who`
+
 3. 
     - `Ctrl + C` – Terminates the currently running process.
     - `Ctrl + D` – Closes terminal session.
     - `Ctrl + Z` – Suspends (pauses) the currently running process and moves it to the background.
+
 4. A normal process runs in the foreground, taking control of the terminal until it finishes. But a background process runs in the background, allowing the user to continue working in the terminal. Background processes can be used to interact with the terminal while, for example, downloading a file.
+
 5.  
     - `jobs` – Lists background jobs running in the current shell.
     - `bg <ID>` – Resumes a suspended job in the background.
     - `fg <ID>` – Brings a background job back to the foreground.
+
 6. 
     - `ps aux` – Shows all running processes.
     - `top` or `htop` – Displays an interactive list of processes.
     - Any other system process viewer application. Plasma System Monition, for example.
+
 7. 
     - `kill -STOP <ID>` - to stop process execution
     - `kill -CONT <ID>` - to continue process execution
