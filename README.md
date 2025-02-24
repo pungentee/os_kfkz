@@ -16,6 +16,7 @@
 ### pungentee
 
 - [Work Case #1](./Linux/pungentee/n1/README.md)
+- [Work Case #2](./Linux/pungentee/n2/README.md)
 
 ### iRaited
 
