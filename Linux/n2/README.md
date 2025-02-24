@@ -231,7 +231,7 @@ You can set up external media in the CD/DVD settings section
 | Type                 | Full desktop environment                                     | Tiling window manager                   |
 | Display Protocol     | X11 and Wayland support                                      | Wayland only                            |
 | Window Management    | Floating by default, with optional tiling                    | Tiling by default                       |
-| Resource Usage       | Heavier (500MB-1GB RAM%20at%20idle)                              | Very light (10-50MB RAM%20at%20idle)        |
+| Resource Usage       | Heavier (500MB-1GB RAM at idle)                              | Very light (10-50MB RAM at idle)        |
 | Configuration        | GUI-based (Settings, GNOME Tweaks)                           | Text file based (~/.config/sway/config) |
 | Default Controls     | Mouse-oriented with keyboard shortcuts                       | Keyboard-focused with mouse support     |
 | Learning Curve       | Gentle, familiar to most users                               | Steeper, requires manual configuration  |
