@@ -107,5 +107,7 @@ The team repository creator is Tymofii Kliyiev
 
 ![image](https://github.com/user-attachments/assets/59112b7e-53bb-4716-b732-7b2768b79ebc)
 
+# iRaited
+
 ## Conclusion
 
