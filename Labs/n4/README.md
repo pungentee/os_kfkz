@@ -2,46 +2,52 @@
 
 **Topic:** Linux commands for process management
 
-
 **Purpose of the Work:**
 - Gaining practical skills in working with the Bash command shell.
 - Familiarization with basic commands for process management.
 
 ## Main task
 
-### 1. 
-1. The `/proc` directory is a virtual filesystem used by the Linux kernel to provide real-time information about running processes. To display directory contents you simply have to use any of folder listener applications (`ls`, `ds`, `dir` etc). List of files and directories inside `/proc`:
+### 2. Answer the questions:
+1. How do I display the contents of the /proc directory? Where is it located and what is it for? Describe the information about its contents?
+
+The `/proc` directory is a virtual filesystem used by the Linux kernel to provide real-time information about running processes. To display directory contents you simply have to use any of folder listener applications (`ls`, `ds`, `dir` etc). List of files and directories inside `/proc`:
     - `/proc/cpuinfo` – Information about the CPU.
     - `/proc/meminfo` – Memory usage details.
     - `/proc/<PID>/` – Process-specific details, where \<PID\> is the process ID.
     - `/proc/uptime` – System uptime.
 
-2. Command `who`
+2. How to display information about current user sessions. What command can I use to do this?
 
-3. 
-    - `Ctrl + C` – Terminates the currently running process.
-    - `Ctrl + D` – Closes terminal session.
-    - `Ctrl + Z` – Suspends (pauses) the currently running process and moves it to the background.
+Command `who`
 
-4. A normal process runs in the foreground, taking control of the terminal until it finishes. But a background process runs in the background, allowing the user to continue working in the terminal. Background processes can be used to interact with the terminal while, for example, downloading a file.
+3. What actions can be performed in the terminal using the Ctrl + C, Ctrl + D, and Ctrl + Z combinations?
 
-5.  
-    - `jobs` – Lists background jobs running in the current shell.
-    - `bg <ID>` – Resumes a suspended job in the background.
-    - `fg <ID>` – Brings a background job back to the foreground.
+- `Ctrl + C` – Terminates the currently running process.
+- `Ctrl + D` – Closes terminal session.
+- `Ctrl + Z` – Suspends (pauses) the currently running process and moves it to the background.
 
-6. 
-    - `ps aux` – Shows all running processes.
-    - `top` or `htop` – Displays an interactive list of processes.
-    - Any other system process viewer application. Plasma System Monition, for example.
+4. What is the difference between a background process and a regular one? Where are they used?
 
-7. 
-    - `kill -STOP <ID>` - to stop process execution
-    - `kill -CONT <ID>` - to continue process execution
-    - `kill -HUP <ID>` - to reload process
+A normal process runs in the foreground, taking control of the terminal until it finishes. But a background process runs in the background, allowing the user to continue working in the terminal. Background processes can be used to interact with the terminal while, for example, downloading a file.
 
+5. Describe the following commands and explain what they do - jobs, bg, fg.
 
-### 2. Answer the questions:
+- `jobs` – Lists background jobs running in the current shell.
+- `bg <ID>` – Resumes a suspended job in the background.
+- `fg <ID>` – Brings a background job back to the foreground.
+
+6. What command can I use to view information about background processes and tasks running in the system?
+
+- `ps aux` – Shows all running processes.
+- `top` or `htop` – Displays an interactive list of processes.
+- Any other system process viewer application. Plasma System Monition, for example.
+
+7. How do I pause a background process, resume it, and restart it if necessary?
+
+- `kill -STOP <ID>` - to stop process execution
+- `kill -CONT <ID>` - to continue process execution
+- `kill -HUP <ID>` - to reload process
 
 ### 3.
 
