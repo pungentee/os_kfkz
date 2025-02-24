@@ -10,7 +10,7 @@
 ## Work cases in Linux
 
 - [Work Case #1](./Linux/n1/README.md)
-- [Work Case #2](./Linux/n2/README.md)
+- [Work Case #2](./Linux/n2/README.md#pungentee)
 
 ## Lectures
 
