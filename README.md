@@ -22,5 +22,6 @@
 
 ## Lectures
 
-[Lecture #1](./Lectures/n1/README.md)
+### pungentee
 
+ - [Lecture #3](./Lectures/pungentee/n3/README.md)
