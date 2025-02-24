@@ -89,7 +89,7 @@ Displaying information using different parameters of the `uname` command
 
 6. Control instructions in Bash manage the flow of execution in scripts and commands. They include conditional statements (if, case), loops (for, while, until), and branching/control operators (&&, ||, ;, &). These structures help automate decisions, repeat tasks, and handle logic efficiently.
 
-7. The difference between $ and # at the end of the Bash prompt indicates the user type:
+7. The difference between $ and #%20at%20the end of the Bash prompt indicates the user type:
   - `$` appears for regular (non-root) users.
   - `#` appears for the root (superuser) account, which has administrative privileges.
 In the image, [centos@localhost Desktop]$ means a regular user, while [root@localhost Desktop]# indicates the superuser, who can execute system-wide commands with full control.

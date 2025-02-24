@@ -46,7 +46,7 @@ git push origin main
 
 ## 2. What is a commit and how does it allow you to track changes in files?
 
-A commit in Git is a snapshot of the changes made to the files in your repository at a specific point in time. It records the state of your project, including any modifications, additions, or deletions, and stores this information in the repository's history. Each commit is uniquely identified by a hash (a long string of characters) and includes metadata such as the author, timestamp, and a commit message describing the changes.
+A commit in Git is a snapshot of the changes made to the files in your repository%20at%20a specific point in time. It records the state of your project, including any modifications, additions, or deletions, and stores this information in the repository's history. Each commit is uniquely identified by a hash (a long string of characters) and includes metadata such as the author, timestamp, and a commit message describing the changes.
 
 ### Example Workflow:
 

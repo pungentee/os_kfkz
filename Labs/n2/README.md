@@ -44,7 +44,7 @@ Gaining practical skills in working with Linux OS and mobile OS environments –
 
 #### 1. Describe the main menu of your mobile OS, what kind of graphical interface does it use?
 
-The main menu of iOS is the Home Screen, which features a grid-based graphical interface. It uses a touch-friendly UI with app icons arranged in rows and columns. The interface is gesture-driven, allowing users to swipe between pages, tap icons to open apps, and use drag-and-drop for customization. The Dock at the bottom provides quick access to frequently used apps. iOS uses a flat design with smooth animations and transparency effects, following Apple’s Human Interface Guidelines.
+The main menu of iOS is the Home Screen, which features a grid-based graphical interface. It uses a touch-friendly UI with app icons arranged in rows and columns. The interface is gesture-driven, allowing users to swipe between pages, tap icons to open apps, and use drag-and-drop for customization. The Dock%20at%20the bottom provides quick access to frequently used apps. iOS uses a flat design with smooth animations and transparency effects, following Apple’s Human Interface Guidelines.
 
 #### 2. Describe the settings menu for the components of a mobile phone.
 
@@ -64,8 +64,8 @@ On iOS, you can use keyboard shortcuts when a physical keyboard is connected (e.
 - ⌘ + H – Go to the Home Screen
 - ⌘ + Space – Open Spotlight search
 - ⌘ + Tab – Switch between open apps
-- ⌘ + Shift + 3 – Take a screenshot
-- ⌘ + Shift + 4 – Take a screenshot and open Markup
+- ⌘ + Shift + 3 – Take a ./attachments/Screenshot
+- ⌘ + Shift + 4 – Take a ./attachments/Screenshot and open Markup
 - ⌘ + Option + D – Show or hide the Dock
 Many apps, like Safari and Notes, support additional shortcuts for navigation and text editing
 
@@ -73,7 +73,7 @@ Many apps, like Safari and Notes, support additional shortcuts for navigation an
 
 To log in to an iOS device, press the Side button or the Home button on older models and use Face ID, Touch ID, or enter a passcode. To shut down the device, go to Settings, then General, and select Shut Down, or hold the Side button along with a Volume button until the power slider appears, then slide to turn off.
 
-Battery power settings in iOS include options for monitoring battery health and charging, enabling Low Power Mode to reduce background activity, and viewing battery usage by app. The system also features Optimized Battery Charging, which slows down charging at night to extend battery lifespan. Additionally, users can manage Background App Refresh to control which apps update in the background, helping to save power.
+Battery power settings in iOS include options for monitoring battery health and charging, enabling Low Power Mode to reduce background activity, and viewing battery usage by app. The system also features Optimized Battery Charging, which slows down charging%20at%20night to extend battery lifespan. Additionally, users can manage Background App Refresh to control which apps update in the background, helping to save power.
 
 ## Control questions
 
@@ -127,7 +127,7 @@ $ tty
 /dev/tty2
 ```
 
-This feature proves especially useful when troubleshooting system issues – for instance, if the graphical interface freezes, you can switch to a text console, log in, and resolve the problem. 
+This feature proves especially useful when troubleshooting system issues – for instance, if the graphical interface freezes, you can switch to a text console, log in, and resolve the problem.
 
 ### 9. Which virtual console (terminal) performs the function of the graphical interface?
 
