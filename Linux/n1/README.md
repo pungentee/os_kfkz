@@ -1,4 +1,6 @@
 
+# pungentee
+
 ## 1. Describe what git is used for, what basic actions and commands it performs.
 
 Git is a distributed version control system primarily used for tracking changes in source code during software development. It enables version control, allowing developers to recall specific versions of files, and supports collaboration by letting multiple developers work on the same project simultaneously. Git facilitates branching and merging for parallel development, acts as a backup system for reverting to previous states, and supports code review workflows to ensure quality before integrating changes.
@@ -86,3 +88,24 @@ Compare changes:
 ```bash
 git diff HEAD~1 HEAD
 ```
+
+# Vladislav 'ElCapitan' Nazarov
+
+### 3. Зареєструйте власний git-аккаунт (gitlab, github або інша платформа).
+
+![image](https://github.com/user-attachments/assets/91e0fe8d-9e25-4506-a9ec-dfbb4270731e)
+
+https://gitea.atproject.com.ua/elcapitan (self-hosted platform)
+
+![image](https://github.com/user-attachments/assets/57721c94-bb39-48f9-88f8-ed9cb1c39536)
+
+https://github.com/at-elcapitan
+
+### 4. Створіть новий публічний репозиторій, який будете використовувати для додавання всіх виконаних робіт з дисципліни «Операційні системи» (якщо працюєте в команді долучіть інших учасників команди до його редакторів).
+
+The team repository creator is Tymofii Kliyiev
+
+![image](https://github.com/user-attachments/assets/59112b7e-53bb-4716-b732-7b2768b79ebc)
+
+## Conclusion
+
