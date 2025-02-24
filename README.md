@@ -9,19 +9,11 @@
 
 ## Work cases in Linux
 
-### ElCapitan
-
-- [Work Case #2](./Linux/elcapitan/n2/README.md)
-
-### pungentee
-
-- [Work Case #1](./Linux/pungentee/n1/README.md)
-- [Work Case #2](./Linux/pungentee/n2/README.md)
-
-### iRaited
+- [Work Case #1](./Linux/n1/README.md)
+- [Work Case #2](./Linux/n2/README.md)
 
 ## Lectures
 
 ### pungentee
 
- - [Lecture #3](./Lectures/pungentee/n3/README.md)
+- [Lecture #3](./Lectures/pungentee/n3/README.md)
