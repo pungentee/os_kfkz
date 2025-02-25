@@ -51,7 +51,7 @@ A normal process runs in the foreground, taking control of the terminal until it
 
 ### 3.
 
-Q## Launch the terminal, and in the command line, do the following to familiarize yourself with the processes
+## Launch the terminal, and in the command line, do the following to familiarize yourself with the processes
 
 ### Run the top command, analyze the result obtained in this command, and characterize the most active processes in the system;
 
@@ -146,3 +146,5 @@ ps -eo pid,user,comm,%cpu,%mem
 8. Yes, third-party apps can enhance process management and monitoring on mobile phones. On Android, apps like Termux provide a Linux terminal for command-line process control, while SystemPanel 2 and CPU Monitor offer detailed resource tracking and process management. Greenify helps optimize background apps to improve performance and battery life. For rooted devices, Tasker automates process handling, and Kernel Adiutor fine-tunes system parameters. On iOS, third-party monitoring is limited due to restrictions, but jailbroken devices can use tools like Filza and NewTerm for process control.
 
 ## Conclusion
+
+In this lab, we explored essential Linux commands for process management, gaining practical experience with `top`, `ps`, `jobs`, `fg`, `bg`, and signal handling. We analyzed system processes, learned how to manage foreground and background tasks, and understood the `/proc` filesystem’s role in monitoring system performance. These skills are fundamental for efficient system administration and troubleshooting in Linux environments.
