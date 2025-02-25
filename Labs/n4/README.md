@@ -51,7 +51,7 @@ A normal process runs in the foreground, taking control of the terminal until it
 
 ### 3.
 
-## Launch the terminal, and in the command line, do the following to familiarize yourself with the processes
+### Launch the terminal, and in the command line, do the following to familiarize yourself with the processes
 
 ### Run the top command, analyze the result obtained in this command, and characterize the most active processes in the system;
 
