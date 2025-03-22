@@ -1,5 +1,35 @@
 ## Work-case 3
 
+### Task 2. Different types of Virtual Machine Network Connections
+
+#### NAT (Network Address Translation)
+
+- Uses host's IP for external connections
+- VMs get private IPs from VMware DHCP
+- Internet access without extra IPs
+- VMs are hidden behind host's firewall
+
+#### Bridged
+
+- VM connects directly to physical network
+- Gets own IP from network DHCP
+- Appears as independent device on network
+- External devices can access VM directly
+
+#### Host-only
+
+- Private network between host and VMs
+- VMs communicate with host and other VMs
+- No external access without host routing
+- Isolated from physical network
+
+#### Internal Network
+
+- Isolated network between VMs only
+- No connection to host or external networks
+- VMs only see other VMs on same internal network
+- Complete network isolation
+
 ### Task 3
 
 #### 1. Demonstrate the basic commands for configuring OS network settings and explain what they do.
