@@ -138,3 +138,7 @@ tar -xzvf archive.tar.gz
 ![alt text](./attachments/8.png)
 
 Extracts the contents of a `tar.gz` archive.
+
+## Conclusion
+
+During the completion of this lab, various Linux commands for archiving, compressing, and working with text were explored. Practical skills in using tar, gzip, bzip2, and zip commands were developed, allowing efficient file management and data compression. Additionally, text manipulation commands like cat, grep, sort, and wc were applied to process and analyze textual data in the terminal. This lab provided valuable experience in handling files and working with command-line utilities essential for Linux system administration.
