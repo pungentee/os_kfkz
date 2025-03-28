@@ -10,6 +10,48 @@
 
 ## Answers to questions about preparing
 
+### 1: Purpose of tar, xz, zip, bzip, gzip Commands
+
+| Command | Purpose                                                                    | Main Parameters                                                                               | Installation                          |
+| ------- | -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------- |
+| tar     | Creates and manages archives of files/directories, often with compression. | -c (create), -x (extract), -t (list), -v (verbose), -f (file), -z (gzip), -j (bzip2), -J (xz) | Pre-installed; `sudo apt install tar` |
+| xz      | Compresses files with LZMA2 for high efficiency.                           | -d (decompress), -l (list), -c (stdout), -0 to -9 (level), -e (extreme)                       | `sudo apt install xz-utils`           |
+| zip     | Creates compressed ZIP archives, cross-platform compatible.                | -r (recursive), -q (quiet), -0 to -9 (level)                                                  | `sudo apt install zip`                |
+| bzip2   | Compresses files with Burrows-Wheeler algorithm, better than gzip.         | -d (decompress), -s (low memory), -1 to -9 (block size)                                       | `sudo apt install bzip2`              |
+| gzip    | Compresses files with DEFLATE, fast and widely supported.                  | -d (decompress), -r (recursive), -l (list), -1 to -9 (level), -c (stdout)                     | `sudo apt install gzip`               |
+
+### 2: Three Examples of Archiving and Compression
+
+| Example | Command                                 | Description                                                           |
+| ------- | --------------------------------------- | --------------------------------------------------------------------- |
+| 1       | tar czvf archive.tar.gz /home/user/docs | Archives /home/user/docs and compresses with gzip into archive.tar.gz |
+| 2       | tar cjvf archive.tar.bz2 /etc/udev      | Archives /etc/udev and compresses with bzip2 into archive.tar.bz2     |
+| 3       | xz -9 largefile.txt                     | Compresses largefile.txt with xz at max level into largefile.txt.xz   |
+
+### 3: Purpose of cat, less, more, head, and tail Commands
+
+| Command | Purpose                                         | Main Parameters                                               | Installation            |
+| ------- | ----------------------------------------------- | ------------------------------------------------------------- | ----------------------- |
+| cat     | Displays file contents or concatenates files.   | -n (number lines), -b (number non-blank), -s (squeeze blanks) | Pre-installed           |
+| less    | Views file contents page by page, scrollable.   | -N (line numbers), -S (chop lines), -q (quiet)                | `sudo apt install less` |
+| more    | Shows file contents page by page, forward-only. | -d (prompt), -num (lines per page)                            | Pre-installed           |
+| head    | Shows first few lines of a file (default 10).   | -n (lines), -c (bytes)                                        | Pre-installed           |
+| tail    | Shows last few lines of a file (default 10).    | -n (lines), -f (follow)                                       | Pre-installed           |
+
+### 4: How the Command Shell Works with Channels, Streams, and Filters
+
+| Concept      | Description                                                                                                                     |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| Streams      | Bash uses stdin (0) for input, stdout (1) for output, stderr (2) for errors.                                                    |
+| Channels     | Redirection operators: > (stdout to file), >> (append), < (stdin from file), 2> (stderr), &> (both), \| (pipe stdout to stdin). |
+| Filters      | Commands like grep or sort process input and output filtered data, often in pipes (e.g., cat file \| grep "text").              |
+| How It Works | Shell processes commands, redirecting or piping streams as specified (e.g., cmd1 \| cmd2 sends cmd1 output to cmd2 input).      |
+
+### 5: Purpose of the grep Command
+
+| Command | Purpose                                                          | Main Parameters                                                                  | Installation                         |
+| ------- | ---------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------------ |
+| grep    | Searches for patterns in files or input, outputs matching lines. | -i (ignore case), -r (recursive), -n (line numbers), -v (invert), -l (filenames) | Pre-installed; sudo apt install grep |
 
 
 ## Main task
