@@ -17,6 +17,7 @@
 - [Work Case #3](./Linux/n3/README.md)
 - [Work Case #4](./Linux/n4/README.md)
 - [Work Case #5](./Linux/n5/README.md)
+- [Work Case #6](./Linux/n6/README.md)
 
 ## Lectures
 
