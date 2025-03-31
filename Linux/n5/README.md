@@ -59,3 +59,7 @@ It’s used to integrate external storage devices—like flash drives, hard driv
 - Windows: Prioritizes automation, reducing user intervention but offering less flexibility.
 
 ## Task 2. Connect USB Flash Drive to VM
+
+## Conclusion
+
+This work case examined peripheral management in Linux versus Windows, focusing on flash drives and printers. Linux requires manual mounting (e.g., `/dev/sda1` to `/mnt/sda1`) for flexibility, while Windows automates the process for ease. We successfully connected a USB drive to a VM, confirming its functionality. Linux offers more control but demands greater user involvement than Windows' automated approach.
