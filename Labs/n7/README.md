@@ -60,6 +60,16 @@ Mounting is the process of making a storage device or file system accessible to 
 
 ## Answers to control questions
 
+1. `arch` shows only the CPU architecture. `lscpu` provides detailed information about the CPU.
+
+2. `free -h`, `top`, `htop`, `vmstat`, `cat /proc/meminfo`.
+
+3. Using `if`, `case`, `for`, `while`, `until`, and variable syntax like `$VAR`, `$(command)` in Bash scripts.
+
+4. `lsusb`, `lspci`, `dmesg`, `usb-devices`, `udevadm info`, `hwinfo`, `lshw`, `lsblk`.
+
+5. Creating, deleting, resizing, formatting, checking, copying partitions and file systems.
+
 ## Conclusion
 
 During completion of this lab, various Linux commands were practiced to retrieve system information and hardware details efficiently.
