@@ -1,12 +1,11 @@
 # Lab. #9
 
-**Topic:** Linux commands for archiving and compressing data. Working with text
+**Topic:** System and User Security in Linux. Creating Users and Groups
 
 **Purpose of the Work:**
 
-- Gaining practical skills in working with the Bash shell.
-- Learn basic commands for archiving and compressing data.
-- Familiarization with basic actions when working with text in the terminal.
+- To gain practical skills in working with the Bash command-line shell.
+- To become familiar with the basic operations for creating new users and user groups.
 
 ## Answers to questions about preparing
 
