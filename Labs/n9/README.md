@@ -11,9 +11,9 @@
 
 ## Main task
 
-### 2.
+### Task 2.
 
-### 3. Execute commands in GNU/Linux terminal
+### Task 3. Execute commands in GNU/Linux terminal
 
 1.
 
@@ -59,6 +59,8 @@
 10.
 
 ![image](https://github.com/user-attachments/assets/27b6bf10-5411-4e00-beb2-dca29593465e)
+
+## Answers to control questions
 
 ## Conclusion
 
