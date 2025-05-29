@@ -41,8 +41,7 @@
 | ss -s                                         | Shows a summary of socket statistics, including total connections and protocol-specific counts.                                |
 | dig example.com                               | Performs a detailed DNS query for example.com, providing comprehensive DNS record information.                                 |
 
-
-### Task 3.
+### Task 3
 
 ## Answers to control questions
 
