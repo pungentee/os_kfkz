@@ -11,6 +11,7 @@
 - [Laboratory work #7](./Labs/n7/README.md)
 - [Laboratory work #8](./Labs/n8/README.md)
 - [Laboratory work #9](./Labs/n9/README.md)
+- [Laboratory work #10](./Labs/n10/README.md)
 
 ## Work cases in Linux
 

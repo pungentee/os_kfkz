@@ -47,4 +47,4 @@
 
 ## Conclusion
 
-During this practical work, the student gained hands-on experience managing system data and network configurations in the Linux operating system using the Bash command-line interface. The tasks included exploring the /proc filesystem, analyzing log files, using network tools like ifconfig, ping, and dig, and applying the cal command to handle files, enhancing skills in system administration and troubleshooting.
+We gained practical experience in managing system data and network configurations in Linux using the Bash command-line interface. We explored the /proc filesystem, analyzed log files, and used network tools like ifconfig, ping, and dig. Working with commands like cal helped us better understand system administration and troubleshooting, enhancing our skills in Linux system management.
