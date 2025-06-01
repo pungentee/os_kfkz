@@ -32,4 +32,7 @@
 
 ### pungentee
 
-- [Essay #5](./Essays/5.md)
+- [Essay #5](./Essays/pungentee_5/README.md)
+- [Essay #8](./Essays/pungentee_8/README.md)
+- [Essay #9](./Essays/pungentee_9/README.md)
+- [Essay #12](./Essays/pungentee_12/README.md)
