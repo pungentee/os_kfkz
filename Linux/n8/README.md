@@ -14,6 +14,8 @@ sudo dnf install ranger w3m mutt cmus transmission-cli calcurse feh tmux
 ranger
 ```
 
+![image](./attachments/ranger.png)
+
 Key controls:
 
 - /k or ↑/↓ — navigate up/down
@@ -28,6 +30,8 @@ Key controls:
 ```bash
 w3m https://www.google.com
 ```
+
+![image](./attachments/web.png)
 
 Key controls:
 
@@ -52,6 +56,8 @@ echo "set realname = 'Your Name'" >> ~/.muttrc
 mutt
 ```
 
+![image](./attachments/mutt.webp)
+
 Key controls:
 
 - j/k – navigate emails
@@ -66,6 +72,8 @@ Key controls:
 ```bash
 cmus
 ```
+
+![image](./attachments/music.png)
 
 Key controls:
 
@@ -83,11 +91,15 @@ Key controls:
 transmission-cli /path/to/file.torrent
 ```
 
+![image](./attachments/torrent.png)
+
 ### 6. Schedule Events and Calendar — **calcurse**
 
 ```bash
 calcurse
 ```
+
+![image](./attachments/tasks.png)
 
 Key controls:
 
@@ -106,6 +118,8 @@ Key controls:
 ```bash
 feh image.jpg
 ```
+
+![image](./attachments/image.png)
 
 Key controls:
 
