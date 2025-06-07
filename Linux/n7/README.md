@@ -1,11 +1,15 @@
 # Work Case #7
 
+## Task 1.
+
+## Task 2.
+
 ## Task 3. Using Systemd Timers as an Alternative to the Cron
 
-###  Environment
+### Environment
 
 - Operating System: **Fedora**
-- Scheduler: **Systemd timers**
+- Alternative Scheduler: **Systemd timers**
 
 ### Timer 1: Daily Cleanup of Temporary Files
 
@@ -173,5 +177,17 @@ sudo systemctl start boot.timer
 ### Verifying and Monitoring
 
 - List timers: `systemctl list-timers`
+
+    ![image](./attachments/image3.1.png)
+
 - Check status: `systemctl status <timer-name>.timer`
+
+    ![image](./attachments/image3.2.png)
+
 - View logs: `journalctl -u <service-name>.service`
+
+    ![image](./attachments/image3.3.png)
+
+## Conclusion
+
+Task schedulers automate routine tasks in operating systems. We compared Windows Task Scheduler with Linux's Cron, which uses crontab files, and explored Systemd timers as a modern alternative. On Fedora, we scheduled daily cleanups, weekly backups, daily update checks, and post-reboot logging using Systemd timers. While Cron is simple and widely used, Systemd timers offer better integration, logging, and dependency management. The choice depends on system needs and user preferences.
