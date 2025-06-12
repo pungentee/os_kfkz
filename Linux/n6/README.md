@@ -84,3 +84,20 @@ sudo passwd visitor2
 ```
 
 ![image](./attachments/2.png)
+
+## Task 3 and 4
+
+Task completition:
+* `sudo useradd -m -g techsupport -s /bin/bash user_techsupport` — creates a user `user_techsupport` in group `techsupport` with a home directory and Bash as their shell.
+* `sudo useradd -m -g developers -s /usr/bin/fish user_developer` — creates a user `user_developer` in group `developers` with a home directory and Fish shell.
+* `sudo useradd -m -g financiers -s /usr/sbin/nologin user_financier` — creates a user `user_financier` in group `financiers` with a home directory but no shell access.
+* `sudo useradd -m -g founders -s /bin/sh user_founder` — creates a user `user_founder` in group `founders` with a home directory and the sh shell.
+* `sudo useradd -m -g guests -s /usr/sbin/nologin user_guest` — creates a user `user_guest` in group `guests` with a home directory but no shell access.
+* `getent passwd user_techsupport` — shows the details of the user `user_techsupport` from the system’s user database.
+* `getent passwd user_developer` — shows the details of the user `user_developer`.
+* `getent passwd user_financier` — shows the details of the user `user_financier`.
+* `getent passwd user_founder` — shows the details of the user `user_founder`.
+* `getent passwd user_guest` — shows the details of the user `user_guest`.
+
+![Screenshot_20250612_130831](https://github.com/user-attachments/assets/1778be43-4805-47d4-be2e-c7456045dc81)
+
