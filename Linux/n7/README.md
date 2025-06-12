@@ -4,6 +4,114 @@
 
 ## Task 2.
 
+### 1. Run a scheduled task at a specific time
+
+Run a task once every day at a specified time.  
+
+**Example:** Run a backup script every day at 8:00 AM.
+
+```bash
+0 8 * * * /home/user/scripts/backup.sh
+````
+
+Explanation:
+
+* `0` minute
+* `8` hour (8 AM)
+* `* * *` means every day, every month, every day of the week
+
+### 2. Run the same task twice a day
+
+Run a task two times per day at specified times.
+**Example:** Run a cleanup script at 8:00 AM and 6:30 PM every day.
+
+```bash
+0 8 * * * /home/user/scripts/cleanup.sh
+30 18 * * * /home/user/scripts/cleanup.sh
+```
+
+Explanation:
+
+* First line runs at 8:00 AM
+* Second line runs at 6:30 PM (18:30)
+* Both run every day
+
+### 3. Run a task only on weekdays or weekends during a time range
+
+Run a task every hour between 8 AM and 6 PM on weekdays (Monday to Friday).
+**Example:** Run monitoring every hour on weekdays from 8:00 to 18:00.
+
+```bash
+0 8-18 * * 1-5 /home/user/scripts/monitor.sh
+```
+
+Explanation:
+
+* `0` minute
+* Hours from `8` to `18` (8 AM to 6 PM)
+* Days of week `1-5` (Monday to Friday)
+
+Run a task every hour between 8 AM and 6 PM on weekends (Saturday and Sunday).
+
+```bash
+0 8-18 * * 6,7 /home/user/scripts/weekend_task.sh
+```
+
+Explanation:
+
+* Days of week `6,7` mean Saturday and Sunday
+
+### 4. Run tasks with special frequencies
+
+#### Once per year
+
+Run a task at midnight on January 1st every year.
+
+```bash
+0 0 1 1 * /home/user/scripts/yearly_task.sh
+```
+
+Explanation:
+
+* `0` minute, `0` hour (midnight)
+* `1` day of month, `1` month (January)
+
+#### Once per month
+
+Run a task at midnight on the 1st day of each month.
+
+```bash
+0 0 1 * * /home/user/scripts/monthly_task.sh
+```
+
+#### Once per day
+
+Run a task every day at midnight.
+
+```bash
+0 0 * * * /home/user/scripts/daily_task.sh
+```
+
+#### Every hour
+
+Run a task at the start of every hour.
+
+```bash
+0 * * * * /home/user/scripts/hourly_task.sh
+```
+
+#### At system startup
+
+Run a task every time the system boots up.
+
+```bash
+@reboot /home/user/scripts/startup_task.sh
+```
+
+Explanation:
+
+* `@reboot` is a tag, that tells cron to run command on reboot
+
 ## Task 3. Using Systemd Timers as an Alternative to the Cron
 
 ### Environment
