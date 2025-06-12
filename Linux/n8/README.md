@@ -131,6 +131,67 @@ Key controls:
 
 ## Task 2.
 
+### 1. Entering, Editing, and Deleting Text
+
+#### Common text editors:
+
+- `vi` / `vim` — terminal-based text editor, very popular and powerful  
+- `nano` — easy-to-use terminal editor, user-friendly for beginners  
+- `emacs` — highly extensible and powerful editor  
+- `gedit` — graphical text editor for GNOME desktop environment  
+
+#### Installing and using `vim` (usually pre-installed):
+
+```bash
+sudo apt-get update
+sudo apt-get install vim
+````
+
+To edit a file with `vi`:
+
+```bash
+vi filename.txt
+```
+
+**Basic `vi` commands:**
+
+* Press `i` to enter insert mode (start editing)
+* Press `Esc` to exit insert mode
+* Type `:w` and press Enter to save changes
+* Type `:q` and press Enter to quit
+* Type `:wq` and press Enter to save and quit
+* Type `:q!` and press Enter to quit without saving
+
+### 2. Monitoring Processes and System Resources
+
+#### Common tools:
+
+* `top` — terminal-based real-time system monitor
+* `htop` — improved interactive process viewer (not always installed by default)
+* `ps` — snapshot of current processes
+* `glances` — advanced system monitoring tool
+* `gnome-system-monitor` — graphical system monitor for GNOME desktop
+
+#### Installing and using `htop`:
+
+```bash
+sudo apt-get update
+sudo apt-get install htop
+```
+
+To start `htop`:
+
+```bash
+htop
+```
+
+`htop` provides:
+
+* Real-time CPU and memory usage
+* List of running processes with user, CPU%, memory%, and process tree
+* Interactive process management (kill, renice)
+
+
 ## Task 3.
 
 ## Conclusion
