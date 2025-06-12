@@ -8,11 +8,11 @@
 - Familiarization with basic actions when changing file owners, file permissions
 - Familiarization with special directories and files in Linux.
 
-# Answers to questions about preparing
+## Answers to questions about preparing
 
-# Main task
+## Main task
 
-## Task 2. Linux Commands Description Table
+### Task 2. Linux Commands Description Table
 
 |Command Name|Purpose and Functionality|
 |---|---|
@@ -62,16 +62,16 @@
 |ln -s /proc crossdir|Creates a symbolic link named crossdir pointing to the /proc directory.|
 |ls -l crossdir|Lists details of the crossdir symbolic link, showing it points to /proc.|
 
-## Task 3
+### Task 3
 
-### 1. Create 3 New Users
+#### 1. Create 3 New Users
 ```bash
 sudo useradd user1 && \
 sudo useradd user2 && \
 sudo useradd user3
 ```
 
-### 2. Create a New Group and Add 2 Users to It
+#### 2. Create a New Group and Add 2 Users to It
 ```bash
 sudo groupadd mygroup && \
 sudo usermod -aG mygroup user1 && \
@@ -80,34 +80,34 @@ sudo usermod -aG mygroup user2
 
 ![Screenshot_20250612_124602](https://github.com/user-attachments/assets/ca02d6d3-cb57-42e0-b5ea-0aaa5df8f530)
 
-### 3. Create a Script File with Full Owner Permissions
+#### 3. Create a Script File with Full Owner Permissions
 ```bash
 echo -e "#!/bin/bash\necho Hello" > myscript.sh && \
 chmod 700 myscript.sh
 ```
 
-### 4. Set File Permissions for Group and Others
+#### 4. Set File Permissions for Group and Others
 ```bash
 chmod 750 myscript.sh && \
 sudo chown user1:mygroup myscript.sh
 ```
 ![Screenshot_20250612_124806](https://github.com/user-attachments/assets/172e9f72-5dfa-476e-a02a-2567fe5f386d)
 
-### 5. Create Directories with Specific Access Rules
+#### 5. Create Directories with Specific Access Rules
 
-#### Directory for All Users (Read/Write/Execute)
+##### Directory for All Users (Read/Write/Execute)
 ```bash
 mkdir shared_dir && \
 chmod 777 shared_dir
 ```
 
-#### Directory for Owner Only
+##### Directory for Owner Only
 ```bash
 mkdir private_dir && \
 chmod 700 private_dir
 ```
 
-#### Directory for Group Users (Read + Execute Only)
+##### Directory for Group Users (Read + Execute Only)
 ```bash
 mkdir group_read_only && \
 sudo chown user1:mygroup group_read_only && \
@@ -116,7 +116,7 @@ chmod 750 group_read_only
 
 ![Screenshot_20250612_125003](https://github.com/user-attachments/assets/1780c343-7b51-4b13-8cc5-a12677c6495d)
 
-### 6. Create an Empty File and Test chmod Behavior
+#### 6. Create an Empty File and Test chmod Behavior
 ```bash
 touch emptyfile && \
 chmod 000 emptyfile
@@ -132,7 +132,7 @@ ls -l emptyfile
 
 ![Screenshot_20250612_125030](https://github.com/user-attachments/assets/159465f3-8a7f-4ad0-83f6-533aecdbe762)
 
-### 7. Create a Group-Owned Directory with setgid Bit
+#### 7. Create a Group-Owned Directory with setgid Bit
 ```bash
 mkdir groupdir && \
 sudo chown :mygroup groupdir && \
@@ -141,9 +141,9 @@ chmod 2770 groupdir
 
 ![Screenshot_20250612_125107](https://github.com/user-attachments/assets/5b0cec6b-3f51-4233-9915-1c840d5660a0)
 
-### 8. For Each User: Create a File, Hard Link, and Symbolic Link
+#### 8. For Each User: Create a File, Hard Link, and Symbolic Link
 
-#### As `user1`:
+##### As `user1`:
 ```bash
 sudo -u user1 bash -c "cd ~ && \
 touch file1 && \
@@ -151,7 +151,7 @@ ln file1 file1_hard && \
 ln -s file1 file1_symlink"
 ```
 
-#### As `user2`:
+##### As `user2`:
 ```bash
 sudo -u user2 bash -c "cd ~ && \
 touch file2 && \
@@ -159,7 +159,7 @@ ln file2 file2_hard && \
 ln -s file2 file2_symlink"
 ```
 
-#### As `user3`:
+##### As `user3`:
 ```bash
 sudo -u user3 bash -c "cd ~ && \
 touch file3 && \
@@ -169,14 +169,14 @@ ln -s file3 file3_symlink"
 
 ![Screenshot_20250612_125154](https://github.com/user-attachments/assets/10d5c7cc-db05-4f76-8262-bc24c8908619)
 
-### 9. Test Access and Deletion by Other Users
+#### 9. Test Access and Deletion by Other Users
 
-#### Try Reading Another Users File
+##### Try Reading Another Users File
 ```bash
 sudo -u user2 cat /home/user1/file1
 ```
 
-#### Try Deleting Another User’s File
+##### Try Deleting Another User’s File
 
 ```bash
 sudo -u user2 rm /home/user1/file1
