@@ -9,6 +9,43 @@
 
 ## Answers to questions about preparing
 
+### 1. Create a glossary of basic English terms related to command purposes and their parameters.
+
+   - **root**: The superuser account with full administrative privileges.
+   - **sudo**: A command allowing users to execute commands with root privileges.
+   - **su**: A command to switch to another user account, typically root.
+   - **/etc/passwd**: File storing user account information.
+   - **/etc/group**: File defining group memberships.
+   - **UID**: User ID, a unique identifier for a user.
+   - **GID**: Group ID, a unique identifier for a group.
+   - **groupadd**: Command to create a new group.
+   - **groupmod**: Command to modify group attributes.
+   - **id**: Command to display user and group information.
+   - **who**: Command showing currently logged-in users.
+   - **last**: Command displaying login and reboot history.
+   - **grep**: Command to search for patterns in files.
+   - **getent**: Command to retrieve entries from system databases (e.g., groups).
+
+### 4. Answer the following questions based on the material:
+
+   #### 4.1. Explain the concept of UPG and when it is appropriate to use them.
+   
+   A User Private Group (UPG) is a group automatically created with the same name as a new user, where the user is the only member. It is used to enhance file privacy by setting the user’s home directory to be owned by the user and their private group, with permissions restricting access to others. UPGs are appropriate in systems where individual user privacy is prioritized, such as multi-user environments, to prevent unauthorized access to user files.
+
+   #### 4.2. Which commands can be used to create user groups? Provide examples.
+   
+   The `groupadd` command is used to create new groups. Examples:
+     - `sudo groupadd developers`: Creates a group named "developers" with an automatically assigned GID.
+     - `sudo groupadd -g 1001 sales`: Creates a group named "sales" with GID 1001.
+
+   #### 4.3. Which commands can be used to modify user group settings? Provide examples.
+   
+   The `groupmod` command modifies group settings. Examples:
+     - `sudo groupmod -n newname oldname`: Renames the group "oldname" to "newname".
+     - `sudo groupmod -g 1002 developers`: Changes the GID of the "developers" group to 1002.
+
+---
+
 ## Main task
 
 ### Task 2. Linux Commands Description Table
@@ -95,6 +132,47 @@
 ![image](https://github.com/user-attachments/assets/27b6bf10-5411-4e00-beb2-dca29593465e)
 
 ## Answers to control questions
+
+### 1. Why are passwords not stored in plain text in configuration files?
+
+Passwords are stored in hashed form (e.g., in `/etc/shadow`) to enhance security. If stored in plain text, unauthorized access to the file could expose passwords, compromising system security. Hashing ensures that even if the file is accessed, the actual passwords cannot be easily retrieved.
+
+### 2. Why is it not recommended to perform daily operations using the root account?
+
+Using the root account for daily tasks is risky because it has unrestricted access, increasing the chance of accidental damage (e.g., deleting critical files). Running programs like browsers as root can also expose the system to vulnerabilities, as malicious code would have full system access. Instead, use `sudo` for specific administrative tasks to limit exposure.
+
+### 3. What is the difference between the mechanisms for obtaining elevated privileges with `su` and `sudo`?
+
+`su` switches the user to another account (typically root) and maintains that session until logout, requiring the target user’s password. `sudo` allows executing specific commands with elevated privileges without switching accounts, using the user’s own password (if configured). `sudo` provides better auditing and granular control via `/etc/sudoers`.
+
+### 4. Why is the root user’s home directory not located in `/home`?
+
+The root user’s home directory is typically `/root` to isolate it from regular user directories in `/home`. This separation ensures root’s critical files (e.g., configuration files) are not affected by issues in `/home` (e.g., disk quotas or permissions) and enhances security by reducing accidental access by non-root users.
+
+### 5. What is the purpose of the `getent` command?
+
+The `getent` command retrieves entries from system databases (e.g., `/etc/passwd`, `/etc/group`) or network-based services (e.g., LDAP). It is used to query user, group, or other system information, unifying local and network-based data. Example: `getent group developers` shows group details.
+
+### 6. How can a user’s password be changed?
+
+The `passwd` command changes a user’s password. Example: `sudo passwd username` prompts for a new password for the specified user. For the current user, simply run `passwd`.
+
+### 7. How can existing user groups be deleted? Will information about them remain in the system?
+
+The `groupdel` command deletes a group. Example: `sudo groupdel developers`. If no users are assigned to the group, it is fully removed from `/etc/group`. However, files previously owned by the group’s GID may still reference the GID numerically, but no group name will be associated unless a new group is created with the same GID.
+
+### 8. What is the purpose of the `chage` command?
+
+The `chage` command manages user password aging policies, such as expiration dates or intervals for password changes. Example: `sudo chage -M 90 username` sets the maximum password validity to 90 days for the specified user.
+
+### 9. Which parameters of the `usermod` command do you consider most commonly used?
+
+Common `usermod` parameters include:
+	`-aG groupname`: Adds a user to a supplementary group (e.g., `sudo usermod -aG developers username`).
+    `-g groupname`: Changes the primary group (e.g., `sudo usermod -g users username`).
+    `-d /new/home`: Changes the home directory (e.g., `sudo usermod -d /home/newdir username`).
+    `-l newname`: Changes the username (e.g., `sudo usermod -l newuser olduser`).
+    These are frequently used for managing group memberships, home directories, and account renaming.
 
 ## Conclusion
 
