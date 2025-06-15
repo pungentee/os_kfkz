@@ -10,6 +10,55 @@
 
 ## Answers to questions about preparing
 
+### 1. Dictionary of Basic English Terms
+Below is a concise dictionary of key English terms related to Linux file ownership, permissions, and commands, based on the provided theoretical information:
+
+- **File Ownership**: The association of a file with a user (UID) and a group (GID).
+- **UID (User ID)**: A numeric identifier for a user in the system.
+- **GID (Group ID)**: A numeric identifier for a group in the system.
+- **Permissions**: Access rights (read, write, execute) for a file or directory.
+- **setuid**: A special permission allowing a program to run with the file owner's privileges.
+- **setgid**: A special permission allowing a program to run with the group owner's privileges or setting group ownership on files in a directory.
+- **Sticky Bit**: A permission restricting file deletion in a directory to the file's owner.
+- **id**: Command to display user and group identity information.
+- **newgrp**: Command to change the current primary group.
+- **chmod**: Command to change file or directory permissions.
+- **chown**: Command to change file or directory ownership.
+- **ls -l**: Command to list files with detailed ownership and permission information.
+- **touch**: Command to create an empty file.
+- **groups**: Command to list groups a user belongs to.
+
+### 4. Answers to Preliminary Questions
+
+#### 4.1. What is the purpose of the id command?  
+The `id` command displays the current user's identity information, including the user ID (UID), primary group ID (GID), and supplemental group memberships, shown as both names and numeric IDs.
+
+#### 4.2. How can you view the access rights of a file’s owner?  
+Use the `ls -l` command to list files in long format. The first part of the permission string (e.g., `rwxr-xr-x`) shows the owner’s permissions: the first three characters (rwx) indicate read, write, and execute rights for the owner.
+
+#### 4.3. How can you change the group owner of a file?  
+To change the group owner, use the `chown` command with the `:group_name` syntax, e.g., `chown :group_name file`. Alternatively, use `chgrp group_name file`. To change both user and group, use `chown user:group file`.
+
+#### 4.4. How can you view the type of the current file in the terminal? Provide examples for different file types.  
+Use the `ls -l` command, where the first character in the permission string indicates the file type:
+- **Regular file**: `-` (e.g., `-rw-r--r-- file.txt`)
+- **Directory**: `d` (e.g., `drwxr-xr-x dir`)
+- **Symbolic link**: `l` (e.g., `lrwxrwxrwx link -> target`)
+- **Block device**: `b` (e.g., `brw-rw---- disk`)
+- **Character device**: `c` (e.g., `crw-rw---- tty`)
+- **Named pipe**: `p` (e.g., `prw-r--r-- pipe`)
+- **Socket**: `s` (e.g., `srw-rw-rw- socket`)
+
+#### 4.5. What are the setuid and setgid permissions used for?  
+- **setuid**: When set on an executable, it allows the program to run with the file owner’s privileges (e.g., `passwd` runs as root to modify `/etc/shadow`). Indicated by `s` in the owner’s execute position (e.g., `-rwsr-xr-x`).
+- **setgid**: On an executable, it runs with the group owner’s privileges (e.g., `/usr/bin/wall` accesses tty group files). On a directory, it ensures new files inherit the directory’s group ownership. Indicated by `s` in the group’s execute position (e.g., `drwxrwsr-x`).
+
+#### 4.6. What is the purpose of the “sticky bit” in the system? Provide examples of when it is appropriate to use.  
+The sticky bit restricts file deletion in a directory to the file’s owner, even if others have write permissions. It is indicated by `t` in the others’ execute position (e.g., `drwxrwxrwt`).  
+**Examples**: Commonly used on `/tmp`, where multiple users can create files, but only the file owner can delete their files. Another example is a shared project directory where users can create files but cannot delete others’ files.
+
+---
+
 ## Main task
 
 ### Task 2. Linux Commands Description Table
@@ -185,6 +234,64 @@ sudo -u user2 rm /home/user1/file1
 ![Screenshot_20250612_125307](https://github.com/user-attachments/assets/74449a5b-4904-46dd-b97d-45a83207c050)
 
 ## Answers to control questions
+
+### 1. Provide examples of changing access rights using the symbolic method.  
+- Add read permission for the owner: `chmod u+r file.txt`
+- Remove write permission for the group: `chmod g-w file.txt`
+- Set execute permission for others: `chmod o+x file.txt`
+- Add setuid permission: `chmod u+s program`
+- Remove sticky bit from a directory: `chmod o-t dir`
+
+### 2. Provide examples of changing access rights using the numeric (octal) method.  
+- Set read/write/execute for owner, read/execute for group, read for others: `chmod 754 file.txt`
+- Set read/write for owner, read for group, no permissions for others: `chmod 640 file.txt`
+- Add setuid to existing permissions (e.g., 755): `chmod 4755 program`
+- Set sticky bit on a directory (e.g., 777): `chmod 1777 dir`
+- Remove all permissions: `chmod 000 file.txt`
+
+### 3. What is the purpose of the umask command?  
+The `umask` command sets the default permission mask for new files and directories, subtracted from the default permissions (666 for files, 777 for directories). For example, a umask of `022` results in new files with permissions `644` (666 - 022) and directories with `755` (777 - 022).
+
+### 4. Compare hard links and symbolic links.  
+- Hard Link:
+  - Points directly to the inode of the original file.
+  - Cannot link to directories or files on different filesystems.
+  - Deleting the original file does not affect the hard link (data remains accessible).
+  - Created with: `ln original_file hard_link`
+- Symbolic Link:
+  - Points to the file’s path, not the inode.
+  - Can link to directories or files across filesystems.
+  - Becomes invalid if the original file is deleted (broken link).
+  - Created with: `ln -s original_file symbolic_link`
+
+### 5. Can you execute a file that has execute permissions but no read permissions (--x)? Explain.  
+Yes, a file with `--x` permissions can be executed if the user has access to the file’s contents (e.g., via a script or binary already loaded in memory). However, you cannot read or modify the file’s contents. For scripts, execution may fail if the interpreter (e.g., bash) needs to read the file, but for compiled binaries, execution typically succeeds.
+
+### 6. If we change access rights and permissions in the current session, will they be preserved in the next session?  
+Yes, changes to file permissions (e.g., via `chmod` or `chown`) are persistent across sessions because they are stored in the filesystem. However, temporary changes like switching the primary group with `newgrp` are session-specific and revert when the shell exits.
+
+### 7. Is there a pattern that the system uses for permissions when creating new files? How can you change the default permissions?  
+Yes, new files are created with default permissions of `666` (rw-rw-rw-) and directories with `777` (rwxrwxrwx), modified by the user’s `umask`. For example, a umask of `022` results in `644` for files and `755` for directories. To change default permissions, set a new umask value, e.g., `umask 027` in the user’s shell configuration file (e.g., `~/.bashrc`).
+
+### 8. How can you create a hard link? In what situations is it appropriate to use them?  
+- **Creation**: `ln original_file hard_link`
+- **Use Cases**: Hard links are useful for creating multiple references to the same file within the same filesystem, such as backups or maintaining multiple access points to critical data. They ensure data persistence even if the original filename is deleted, as long as one hard link remains.
+
+### 9. How can you create a symbolic link? In what situations is it appropriate to use them?  
+- **Creation**: `ln -s original_file symbolic_link`
+- **Use Cases**: Symbolic links are ideal for linking to files or directories across different filesystems, creating shortcuts, or referencing frequently updated files (e.g., linking `/var/www/html` to a website’s root directory). They are commonly used in software installations to point to the latest version of a directory.
+
+### 10. Imagine a program needs to create a one-time file that will never be used again after the program closes. What is the correct directory for creating this file?  
+The correct directory is `/tmp`. It is designed for temporary files that can be created by any user or process. Files in `/tmp` are often automatically deleted on reboot or by system cleanup processes, making it ideal for one-time temporary files.
+
+### 11. There is an original file with and both a symbolic link and a hard link to it. What happens if you delete:
+- Original File:  
+  - The symbolic link becomes invalid (broken) and points to a non-existent file.  
+  - The hard link remains valid, as it points to the inode, and the file’s data is still accessible until all hard links are deleted.  
+- Symbolic Link:  
+  - No effect on the original file or hard link, as the symbolic link is just a pointer.  
+- Hard Link:  
+  - The original file remains unaffected as long as at least one link (original or another hard link) exists. The file’s data is only deleted when all hard links are removed, and the inode references are gone.  
 
 ## Conclusion
 
