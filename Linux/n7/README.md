@@ -2,6 +2,69 @@
 
 ## Task 1.
 
+### Task 1: Task Scheduling in Operating Systems
+
+#### 1. Main Functions of a Task Scheduler
+
+A task scheduler automates task execution in an OS, with key functions:
+- **Scheduling**: Defines when tasks (scripts, programs) run, e.g., one-time or recurring.
+- **Automation**: Executes tasks without manual input, e.g., backups, updates.
+- **Triggers**: Supports time-based or event-based (e.g., system boot) execution.
+- **Resource Management**: Allocates CPU/memory, avoids conflicts.
+- **Logging**: Tracks task outcomes for debugging.
+- **Permissions**: Controls user access to scheduling.
+
+#### Comparison: Windows vs. Linux
+
+| **Feature**               | **Windows (Task Scheduler)**                              | **Linux (Cron & Alternatives)**                          |
+|---------------------------|----------------------------------------------------------|---------------------------------------------------------|
+| **Tool**                  | Task Scheduler (GUI/CLI)                                 | Cron (CLI), Systemd Timers, Anacron, At                |
+| **Ease of Use**           | Intuitive GUI, PowerShell for advanced                   | CLI-based, requires learning syntax                    |
+| **Scheduling**            | Time/event-based, minute precision                      | Time-based (Cron), sub-second (Systemd), one-time (At) |
+| **Recurring Tasks**       | Daily/weekly/monthly                                    | Minute/hour/day/month/weekday                          |
+| **Logging**               | Event Viewer                                            | System logs (e.g., /var/log/cron)                      |
+| **Permissions**           | Windows user accounts                                   | Crontab files, cron.allow/deny                         |
+| **Scripting**             | Batch, PowerShell, executables                          | Shell scripts, binaries                                |
+| **Alternatives**          | Third-party (e.g., Z-Cron)                              | Anacron (non-continuous), Systemd Timers, At           |
+
+**Summary**:
+- **Windows**: User-friendly GUI, integrates with Windows events, less flexible for complex schedules.
+- **Linux**: Cron is powerful but CLI-based; alternatives like Systemd Timers add modern features.
+
+#### 2. Cron in Linux: Principles and Configuration
+
+**Principles**:
+- **Daemon**: `crond` checks schedules every minute.
+- **Crontab**: Stores tasks in user (`/var/spool/cron/crontabs/<username>`) or system-wide (`/etc/crontab`) files.
+- **Syntax**: Six fields (minute, hour, day, month, weekday, command).
+- **Permissions**: Managed via `/etc/cron.allow` or `/etc/cron.deny`.
+- **Logging**: Outputs to `/var/log/syslog` or `/var/log/cron`.
+
+**Cron Syntax**:
+```
+* * * * * /script.sh
+```
+- Fields: minute (0-59), hour (0-23), day (1-31), month (1-12), weekday (0-7), command.
+- Special chars: `*` (any), `,` (list), `-` (range), `/` (step).
+- Example: `0 5 * * 1 /backup.sh` runs at 5:00 AM every Monday.
+
+**Configuration**:
+1. **Edit Crontab**: `crontab -e` to add/edit tasks.
+2. **System-Wide**: Edit `/etc/crontab` or use `/etc/cron.{hourly,daily,weekly,monthly}`.
+3. **List Tasks**: `crontab -l`.
+4. **Permissions**: Use `/etc/cron.allow` or `/etc/cron.deny`.
+5. **Test**: Check logs for execution.
+
+**Alternatives**:
+- **Anacron**: For systems not always on, runs missed tasks (e.g., daily backups).
+- **Systemd Timers**: Modern, event-driven, sub-second precision, integrates with Systemd.
+- **At**: For one-time tasks, e.g., `echo "/script.sh" | at 5pm tomorrow`.
+
+**Comparison**:
+- **Anacron**: Ideal for laptops/servers with downtime, less precise than Cron.
+- **Systemd Timers**: More flexible, supports complex triggers, replacing Cron in modern distros.
+- **At**: Simple for single tasks, lacks recurring scheduling.
+
 ## Task 2.
 
 ### 1. Run a scheduled task at a specific time
